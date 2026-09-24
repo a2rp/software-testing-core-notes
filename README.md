@@ -1,184 +1,54 @@
 # Software Testing Core Notes
 
-A structured collection of practical notes covering the foundations of software testing and quality engineering.
+A focused React reference for revising practical software testing concepts, from unit tests and integration testing to API testing, TDD, mocking, and code coverage.
 
-This repository focuses on the core ideas used in modern software development to verify correctness, reliability, and maintainability of applications.
+## Features
 
-The goal is to explain testing concepts in a simple and practical way so developers can understand not only how testing works but also why it matters in real production systems.
+- Topic sections for unit, integration, API, and test-driven development
+- Notes on mocking, coverage, and practical quality checks
+- Dark and light themes with local preference storage
+- Responsive layout with a floating go-to-top control
+- Local assets and GitHub Pages deployment
 
----
+## Tech stack
 
-![alt text](image.png)
+React, Vite, styled-components, and React Icons.
 
----
+## Run locally
 
-## Topics Covered
+~~~
+npm install
+npm run dev
+~~~
 
-- Unit Testing
-- Integration Testing
-- API Testing
-- Test Driven Development (TDD)
-- Mocking and Test Doubles
-- Code Coverage
+## Deployment
 
-Each topic explains the concepts, terminology, and practical examples used in modern software engineering.
+Live site: [a2rp.github.io/software-testing-core-notes](https://a2rp.github.io/software-testing-core-notes/)
 
----
+Build and deploy:
 
-## Why Software Testing Matters
+~~~
+npm run lint
+npm run build
+npm run deploy
+~~~
 
-Testing helps developers detect bugs early, improve code quality, and ensure that systems behave correctly even as the codebase grows.
+## Screenshot
 
-Benefits of testing include:
-
-- Early bug detection
-- Safer refactoring
-- Improved reliability
-- Better developer confidence
-- More maintainable code
-
-Modern development workflows depend heavily on automated tests to maintain stability during continuous development.
-
----
-
-## Key Testing Levels
-
-### Unit Testing
-
-Tests small pieces of code such as individual functions or classes.
-
-Example:
-Testing a function that calculates the total price of items in a shopping cart.
-
----
-
-### Integration Testing
-
-Tests how multiple components work together.
-
-Example:
-Testing if the user registration system correctly stores data in the database.
-
----
-
-### API Testing
-
-Tests backend endpoints to ensure correct request and response behavior.
-
-Example:
-Verifying that a login API returns the correct authentication token.
-
----
-
-### Test Driven Development (TDD)
-
-A development workflow where tests are written before the actual implementation.
-
-Typical cycle:
-
-1. Write a failing test
-2. Implement minimal code to pass the test
-3. Refactor the code
-
----
-
-### Mocking
-
-Mocking replaces real dependencies with simulated objects during testing.
-
-Example:
-Replacing a real database with a mock database during unit tests.
-
----
-
-### Code Coverage
-
-Code coverage measures how much of the codebase is executed during tests.
-
-Common coverage metrics include:
-
-- Line coverage
-- Function coverage
-- Branch coverage
-
-Higher coverage does not guarantee bug-free code, but it helps identify untested areas.
-
----
-
-## Technologies Used
-
-- React
-- Vite
-- Styled Components
-- React Icons
-
-These tools are used to build interactive documentation and expandable concept explanations.
-
----
-
-## Repository Purpose
-
-This repository is part of a larger collection of engineering notes that explain important computer science and software engineering topics.
-
-The aim is to create a clear and accessible reference for developers learning system design, backend engineering, and production-grade software practices.
-
----
-
-## Related Repositories
-
-Other repositories in the Core Notes series include:
-
-- Operating Systems Core Notes
-- Computer Networks Core Notes
-- Backend Engineering Core Notes
-- DevOps and Cloud Core Notes
-- Databases Core Notes
-
-Together these repositories form a structured knowledge base for modern software engineering.
-
----
-
-## Follow Me
-
----
-
-- GitHub: https://www.github.com/a2rp
-- Portfolio: https://www.ashishranjan.net
-- LinkedIn: https://www.linkedin.com/in/aashishranjan
-- Facebook: https://www.facebook.com/theash.ashish/
-- Youtube: https://www.youtube.com/@ashishranjan-ashz
+![Software Testing Core Notes](screenshot.png)
 
 ## Links
 
-- Portfolio: [https://www.ashishranjan.net](https://www.ashishranjan.net)
-- GitHub: [https://github.com/a2rp](https://github.com/a2rp)
-- CodePen: [https://codepen.io/ash1198](https://codepen.io/ash1198)
-- LinkedIn: [https://www.linkedin.com/in/aashishranjan](https://www.linkedin.com/in/aashishranjan)
-- Facebook: [https://www.facebook.com/theash.ashish/](https://www.facebook.com/theash.ashish/)
-- YouTube: [https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1](https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1)
-- Email: [ash.ranjan09@gmail.com](mailto:ash.ranjan09@gmail.com)
+- [Portfolio](https://www.ashishranjan.net/)
+- [GitHub](https://github.com/a2rp)
+- [CodePen](https://codepen.io/ash1198)
+- [LinkedIn](https://www.linkedin.com/in/aashishranjan)
+- [Facebook](https://www.facebook.com/theash.ashish/)
+- [YouTube](https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1)
+- [Email](mailto:ash.ranjan09@gmail.com)
 
 ## Support
 
-- Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
-- Buy Me A Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
-- Patreon: [https://patreon.com/a2rp](https://patreon.com/a2rp)
-<!-- Project links -->
-
-## Links
-
-- Live: [https://a2rp.github.io/software-testing-core-notes/](https://a2rp.github.io/software-testing-core-notes/)
-- Repository: [https://github.com/a2rp/software-testing-core-notes](https://github.com/a2rp/software-testing-core-notes)
-- Portfolio: [https://www.ashishranjan.net/](https://www.ashishranjan.net/)
-- GitHub: [https://github.com/a2rp](https://github.com/a2rp)
-- CodePen: [https://codepen.io/ash1198](https://codepen.io/ash1198)
-- LinkedIn: [https://www.linkedin.com/in/aashishranjan](https://www.linkedin.com/in/aashishranjan)
-- Facebook: [https://www.facebook.com/theash.ashish/](https://www.facebook.com/theash.ashish/)
-- YouTube: [https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1](https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1)
-- Email: [ash.ranjan09@gmail.com](mailto:ash.ranjan09@gmail.com)
-
-## Support
-
-- Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
-- Buy Me a Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
-- Patreon: [https://www.patreon.com/a2rp](https://www.patreon.com/a2rp)
+- [Support](https://a2rp-donation-page.netlify.app/)
+- [Buy Me a Coffee](https://buymeacoffee.com/a2rp)
+- [Patreon](https://patreon.com/a2rp)

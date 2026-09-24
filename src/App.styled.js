@@ -10,7 +10,7 @@ export const Styled = {
     `,
 
     Header: styled.header`
-        height: 60px;
+        height: 64px;
         flex-shrink: 0;
     `,
 

@@ -1,44 +1,27 @@
 // src/components/header/index.jsx
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { FiCheckCircle, FiMoon, FiShield, FiSun } from "react-icons/fi";
 import { Styled } from "./styled";
-import transparentLogo from "/images/transparentLogo.png";
-import { FiMoon, FiSun, FiCheckCircle, FiShield } from "react-icons/fi";
 
 const THEME_LS_KEY = "software-testing-core-notes-theme";
 
 const Header = () => {
-    const [logoLoaded, setLogoLoaded] = useState(false);
-    const [theme, setTheme] = useState("dark");
+    const [theme, setTheme] = useState(() =>
+        localStorage.getItem(THEME_LS_KEY) || "dark",
+    );
 
     useEffect(() => {
-        const storedTheme = localStorage.getItem(THEME_LS_KEY);
-        const initialTheme = storedTheme || "dark";
-        setTheme(initialTheme);
-
-        if (initialTheme === "light") {
-            document.documentElement.setAttribute("data-theme", "light");
-        } else {
-            document.documentElement.removeAttribute("data-theme");
-        }
-    }, []);
-
-    useEffect(() => {
-        if (theme === "light") {
-            document.documentElement.setAttribute("data-theme", "light");
-        } else {
-            document.documentElement.removeAttribute("data-theme");
-        }
-
+        document.documentElement.toggleAttribute(
+            "data-theme",
+            theme === "light",
+        );
         localStorage.setItem(THEME_LS_KEY, theme);
     }, [theme]);
 
-    const nextTheme = useMemo(() => {
-        return theme === "light" ? "dark" : "light";
-    }, [theme]);
-
-    const handleToggle = () => {
-        setTheme(nextTheme);
-    };
+    const nextTheme = useMemo(
+        () => (theme === "light" ? "dark" : "light"),
+        [theme],
+    );
 
     return (
         <Styled.Wrapper>
@@ -46,13 +29,9 @@ const Header = () => {
                 <div className="leftSide">
                     <div className="logoNameWrapper">
                         <div className="logoWrapper">
-                            {!logoLoaded && <div className="logoSkeleton" />}
                             <img
-                                src={transparentLogo}
-                                alt="software-testing-core-notes"
-                                onLoad={() => setLogoLoaded(true)}
-                                style={{ opacity: logoLoaded ? 1 : 0 }}
-                                loading="lazy"
+                                src={import.meta.env.BASE_URL + "logo.png"}
+                                alt="Software testing core notes"
                             />
                         </div>
 
@@ -61,8 +40,8 @@ const Header = () => {
                                 software-testing-core-notes
                             </div>
                             <div className="subTitle">
-                                Unit tests, integration tests, API tests, TDD,
-                                mocking, coverage
+                                Unit testing, integration, API testing, TDD,
+                                mocking, and coverage
                             </div>
                         </div>
 
@@ -87,9 +66,13 @@ const Header = () => {
                     <button
                         type="button"
                         className="themeToggleBtn"
-                        onClick={handleToggle}
-                        aria-label={`Switch to ${nextTheme} theme`}
-                        title={`Switch to ${nextTheme}`}
+                        onClick={() =>
+                            setTheme((currentTheme) =>
+                                currentTheme === "light" ? "dark" : "light",
+                            )
+                        }
+                        aria-label={"Switch to " + nextTheme + " theme"}
+                        title={"Switch to " + nextTheme}
                     >
                         <span className="icon">
                             {theme === "light" ? <FiMoon /> : <FiSun />}

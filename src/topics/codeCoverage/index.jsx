@@ -265,7 +265,7 @@ test("shippingFee returns 0 for big total", () => {
                                 - raise thresholds gradually as repo matures
                             </li>
                             <li>
-                                - allow exceptions for generated code and third
+                                - allow exceptions for tool output and third
                                 party code
                             </li>
                         </ul>

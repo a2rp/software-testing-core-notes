@@ -1,31 +1,22 @@
 import { createElement } from "react";
-import {
-    FiCode,
-    FiCoffee,
-    FiFacebook,
-    FiGithub,
-    FiGlobe,
-    FiHeart,
-    FiLinkedin,
-    FiMail,
-    FiYoutube,
-} from "react-icons/fi";
+import { FiCoffee, FiGlobe, FiHeart, FiMail } from "react-icons/fi";
+import { FaCodepen, FaFacebookF, FaGithub, FaLinkedinIn, FaPatreon, FaYoutube } from "react-icons/fa6";
 import { Styled } from "./styled";
 
 const links = [
     ["Portfolio", "https://www.ashishranjan.net/", FiGlobe],
-    ["GitHub", "https://github.com/a2rp", FiGithub],
-    ["CodePen", "https://codepen.io/ash1198", FiCode],
-    ["LinkedIn", "https://www.linkedin.com/in/aashishranjan", FiLinkedin],
-    ["Facebook", "https://www.facebook.com/theash.ashish/", FiFacebook],
+    ["GitHub", "https://github.com/a2rp", FaGithub],
+    ["CodePen", "https://codepen.io/ash1198", FaCodepen],
+    ["LinkedIn", "https://www.linkedin.com/in/aashishranjan", FaLinkedinIn],
+    ["Facebook", "https://www.facebook.com/theash.ashish/", FaFacebookF],
     [
         "YouTube",
         "https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1",
-        FiYoutube,
+        FaYoutube,
     ],
     ["Support", "https://a2rp-donation-page.netlify.app/", FiHeart],
     ["Buy Me a Coffee", "https://buymeacoffee.com/a2rp", FiCoffee],
-    ["Patreon", "https://patreon.com/a2rp", FiHeart],
+    ["Patreon", "https://patreon.com/a2rp", FaPatreon],
     ["Email", "mailto:ash.ranjan09@gmail.com", FiMail],
 ];
 

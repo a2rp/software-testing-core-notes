@@ -1,5 +1,7 @@
 # Software Testing Core Notes
 
+![Software Testing Core Notes preview](screenshot.png)
+
 A focused React reference for revising practical software testing concepts, from unit tests and integration testing to API testing, TDD, mocking, and code coverage.
 
 ## Features
